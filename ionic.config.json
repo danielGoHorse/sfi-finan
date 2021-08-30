@@ -1,0 +1,7 @@
+{
+  "name": "sfi-finan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
