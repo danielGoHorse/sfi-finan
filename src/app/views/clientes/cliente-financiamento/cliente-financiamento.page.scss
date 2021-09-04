@@ -1,0 +1,51 @@
+.title-page {
+  text-align: center;
+  color: #2ea09c;
+}
+
+.form-label {
+  text-align: start;
+}
+
+
+
+.mb-3 {
+  text-align: left;
+
+  label {
+    font-size: 0.9rem !important;
+    color: #57606b;
+  }
+
+  input {
+    width: 100%;
+    border-radius: 7px;
+    height: 48px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-left: 10px;
+  }
+}
+
+.swiper-pagination {
+  position: none !important;
+}
+
+ion-select {
+  width: 100%;
+
+  justify-content: center;
+
+
+}
+
+:host {
+  .item-interactive {
+    width: 100%;
+    border-radius: 7px;
+    height: 48px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-left: 10px;
+  }
+}

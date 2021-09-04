@@ -1,0 +1,77 @@
+<ion-content [fullscreen]="true" class="back swiper-no-swiping">
+  <ion-grid class="grid">
+
+    <div style="text-align: center; margin-top: 20px; padding: 0px 30px 0px 30px;">
+      <img src="../../../assets/logo.png" alt="" style="width: 190px;margin-top: 7px;">
+    </div>
+
+    <div class="container">
+      <ion-slides style="margin-top: 60px;">
+        <ion-slide>
+          <div class="slide-inner ion-padding">
+            <div id="container">
+              <ion-title class="title-page">
+                <strong>Como Podemos<br> Ajuda-lo?</strong>
+              </ion-title>
+
+              <div class="mb-3" style="margin-top: 20px;">
+                <ion-button expand="block" color="success" (click)="simularFinan()">Financiamento<br>
+                  Imobiliário</ion-button>
+
+              </div>
+              <ion-row class="ion-justify-content-center">
+                <div style=" width: 90%; margin-top: 20px;text-align: center;">
+                  <a (click)="acessSFI()">
+                    <h6 style="color:#198754 !important;font-weight:normal !important">Acesso SFI</h6>
+                  </a>
+                </div>
+              </ion-row>
+
+            </div>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="slide-inner ion-padding">
+            <ion-title class="title-page">
+              <strong>Acesso SFI</strong>
+            </ion-title>
+
+
+            <ion-row class="ion-justify-content-center">
+              <div class="perfil-form">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" aria-describedby="basic-addon3" [(ngModel)]="userLogin.email">
+
+              </div>
+            </ion-row>
+            <ion-row class="ion-justify-content-center">
+              <div class="perfil-form">
+                <label for="password">Digite sua Senha de Adm</label>
+                <input type="password" id="password" maxlength="6" aria-describedby="basic-addon3"
+                  [(ngModel)]="userLogin.password">
+              </div>
+            </ion-row>
+
+            <ion-row class="ion-justify-content-center" style="margin-top: 20px;">
+
+              <ion-button (click)="login()" color="success">Logar</ion-button>
+            </ion-row>
+            <ion-row class="ion-justify-content-center">
+              <div style=" width: 90%; margin-top: 20px;text-align: center;">
+                <a (click)="acessSimulador()">
+                  <h6 style="color:#198754 !important;font-weight:normal !important">Acesso Simulador</h6>
+                </a>
+              </div>
+            </ion-row>
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <ion-row class="ion-justify-content-center">
+        <div style=" width: 90%; margin-top: 10px;text-align: center;">
+          <h5 style="color:#41464b94 !important">Powered by DHGiga</h5>
+        </div>
+      </ion-row>
+    </div>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,52 @@
+<app-header></app-header>
+<ion-content [fullscreen]="true">
+  <div class="container-formulario">
+
+    <ion-row style="padding: 20px;">
+      <ion-col size="12">
+        <h4 class="title-page">Primeiro conte-nos sobre seu imóvel</h4>
+      </ion-col>
+    </ion-row>
+    <div class="row">
+      <div class="mb-3">
+        <label for="vlImovel" class="form-label">Valor do imóvel</label>
+        <input type="number" class="form-control" id="vlImovel" min="100000" placeholder="mínimo R$100.000,00"
+          [(ngModel)]="dadosFinanciamento.valorImovel">
+      </div>
+      <div class="mb-3">
+        <label for="vlEntrada" class="form-label">Valor da entrada</label>
+        <input type="number" class="form-control" id="vlEntrada" min="1" placeholder="mínimo R$1,00"
+          [(ngModel)]="dadosFinanciamento.valorEntrada">
+      </div>
+      <div class="mb-3">
+
+        <label for="local" class="form-label">Localidade</label>
+        <ion-item>
+          <ion-select multiple="false" [value]="['select']" [(ngModel)]="dadosFinanciamento.localImovel">
+            <ion-select-option value="select">Selecione um Estado</ion-select-option>
+            <ion-select-option *ngFor="let estado of estados">{{estado.name}} - {{estado.sigla}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      <div class="mb-3">
+        <label for="prazo" class="form-label">Prazo</label>
+
+        <ion-item>
+
+          <ion-select multiple="false" [value]="['select']" [(ngModel)]="dadosFinanciamento.prazo">
+            <ion-select-option value="select">Selecione</ion-select-option>
+            <ion-select-option *ngFor="let p of prazos">{{p.prazo}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      <div class="mb-3" style="margin-top: 20px;">
+        <ion-button expand="block" color="success" (click)="simular(dadosFinanciamento)">Próximo</ion-button>
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>
+
+<app-footer></app-footer>

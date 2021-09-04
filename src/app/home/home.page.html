@@ -1,20 +1,24 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <app-header></app-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-title class="title-page">
+      <strong>Como Podemos<br> Ajuda-lo?</strong>
+    </ion-title>
+
+    <div class="mb-3" style="margin-top: 20px;" *ngIf="showButton">
+      <ion-button expand="block" color="success" [routerLink]="['/cliente-lista']">Lista de Clientes</ion-button>
+    </div>
+    <div class="mb-3" *ngIf="showButton">
+      <ion-button expand="block" color="success" [routerLink]="['/usuario-registro']">Registrar Usuário</ion-button>
+    </div>
+    <div class="mb-3">
+      <ion-button expand="block" color="success" [routerLink]="['/cliente-financiamento']">Simular Financiamento
+      </ion-button>
+    </div>
+
   </div>
+
 </ion-content>
+
+<app-footer></app-footer>

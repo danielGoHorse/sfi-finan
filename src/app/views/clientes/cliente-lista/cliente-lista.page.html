@@ -1,0 +1,53 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-list *ngIf="!clientes.length">
+    <ion-item *ngFor="let item of [0, 1, 2, 3, 4]">
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+  <ion-list>
+    <ion-item-sliding *ngFor="let cliente of clientes">
+      <ion-item button [routerLink]="['/cliente-detalhes', cliente.id]">
+
+
+        <ion-label>
+          {{ cliente.nome | uppercase }}
+
+          <p><label for="">Cel:</label> {{ cliente.celular }}</p>
+          <p><label for="">E-mail:</label> {{ cliente.email}}</p>
+          <p><label for="">Valor Imóvel:</label> {{ cliente.valorImovel }}</p>
+          <p><label for="">Entrada:</label> {{ cliente.valorEntrada}}</p>
+          <p><label for="">Prazo:</label> {{ cliente.prazo }}</p>
+          <p><label for="">Local:</label> {{ cliente.localImovel}}</p>
+        </ion-label>
+
+        <ion-badge color="success" slot="end" *ngIf="cliente">{{ cliente.valorImovel | currency: 'BRL' }}</ion-badge>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteCliente(cliente.id)">
+          <ion-icon slot="top" name="trash"></ion-icon>
+          Excluir
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <div class="mb-3">
+    <ion-button expand="block" color="success" (click)="sair()">Sair</ion-button>
+  </div>
+</ion-content>
