@@ -29,10 +29,10 @@
 
           <p><label for="">Cel:</label> {{ cliente.celular }}</p>
           <p><label for="">E-mail:</label> {{ cliente.email}}</p>
-          <p><label for="">Valor Imóvel:</label> {{ cliente.valorImovel }}</p>
+          <!-- <p><label for="">Valor Imóvel:</label> {{ cliente.valorImovel }}</p>
           <p><label for="">Entrada:</label> {{ cliente.valorEntrada}}</p>
           <p><label for="">Prazo:</label> {{ cliente.prazo }}</p>
-          <p><label for="">Local:</label> {{ cliente.localImovel}}</p>
+          <p><label for="">Local:</label> {{ cliente.localImovel}}</p> -->
         </ion-label>
 
         <ion-badge color="success" slot="end" *ngIf="cliente">{{ cliente.valorImovel | currency: 'BRL' }}</ion-badge>
