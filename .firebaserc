@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "seraphim-financiamentos": {
+      "hosting": {
+        "app": [
+          "seraphim-financiamentos"
+        ]
+      }
+    }
+  }
+}

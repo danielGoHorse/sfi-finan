@@ -1,0 +1,50 @@
+<app-header></app-header>
+<ion-content [fullscreen]="true">
+  <div class="container-formulario" style="padding-bottom: 10px !important; background-color: #ffffff96 !important;">
+    <div class="mb-3">
+
+
+      <ion-label>
+        <p style="font-size: 1.2rem; margin-bottom: 10px;">{{ cliente.nome | uppercase }}</p>
+
+        <p><label for="">Cel:</label> {{ cliente.celular }}</p>
+        <p><label for="">E-mail:</label> {{ cliente.email}}</p>
+        <p><label for="">Valor Imóvel:</label> {{ cliente.valorImovel | currency: 'BRL' }}</p>
+        <p><label for="">Entrada:</label> {{ cliente.valorEntrada | currency: 'BRL'}}</p>
+        <p><label for="">Prazo:</label> {{ cliente.prazo }}</p>
+        <p><label for="">Local:</label> {{ cliente.localImovel}}</p>
+      </ion-label>
+    </div>
+
+
+
+    <ion-grid>
+      <!-- <ion-row>
+        <ion-col>
+          <div>
+            <ion-button expand="block" color="primary" (click)="voltar()">
+              <ion-icon name="mail-outline"></ion-icon>&nbsp; E-mail
+            </ion-button>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <ion-button expand="block" color="tertiary" (click)="chat()">
+              <ion-icon name="logo-whatsapp"></ion-icon> &nbsp;Whatsapp
+            </ion-button>
+
+          </div>
+        </ion-col>
+
+      </ion-row> -->
+      <ion-row>
+        <ion-col>
+          <div>
+            <ion-button expand="block" color="success" (click)="voltar()">Voltar</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+</ion-content>

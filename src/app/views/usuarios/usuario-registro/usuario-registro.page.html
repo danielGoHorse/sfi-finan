@@ -1,0 +1,46 @@
+<app-header></app-header>
+<ion-content [fullscreen]="true">
+  <ion-title class="title-page">
+    <strong>Registrar Usuários</strong>
+  </ion-title>
+  <ion-row class="ion-justify-content-center">
+    <div class="perfil-form">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" aria-describedby="basic-addon3" [(ngModel)]="userRegister.nome">
+
+    </div>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <div class="perfil-form">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" aria-describedby="basic-addon3" [(ngModel)]="userRegister.email">
+
+    </div>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <div class="perfil-form">
+      <label for="celular">Celular</label>
+      <input type="text" id="celular" aria-describedby="basic-addon3" [(ngModel)]="userRegister.celular">
+
+    </div>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <div class="perfil-form">
+      <label for="role">Perfil</label>
+      <input type="text" id="rolel" aria-describedby="basic-addon3" [(ngModel)]="userRegister.role">
+
+    </div>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <div class="perfil-form">
+      <label for="password">Senha</label>
+      <input type="password" id="password" maxlength="6" aria-describedby="basic-addon3"
+        [(ngModel)]="userRegister.password">
+    </div>
+  </ion-row>
+  <ion-row class="ion-justify-content-center" style="margin-top: 20px;">
+
+    <ion-button (click)="register()" color="success">Cadastrar</ion-button>
+  </ion-row>
+</ion-content>
+<app-footer></app-footer>

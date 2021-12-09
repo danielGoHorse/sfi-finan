@@ -1,0 +1,10 @@
+{
+  "name": "sfi-finan",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}
